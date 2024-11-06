@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="system">
+    <div class="container  bg-info py-5 my-1">
+      <h2 class=" titel text-center">CRUD</h2>
+      <form>
+        <form>
+          <div class="mb-3">
+            <label for="titel" class="form-label">Enter Product Name</label>
+            <input type="text" class="form-control" id="titel" aria-describedby="emailHelp">
+            <div id="error-title" style="color: red; display: none;">Cannot add product. Please fill in all fields.</div>
+          </div>
+         
+          <div class="mb-3">
+            <label for="price" class="form-label">Enter Product Price</label>
+            <input type="number" class="form-control" id="price">
+            <div id="error-price" style="color: red; display: none;">Cannot add product. Please fill in all fields.</div>
+          </div>
+          <div class="mb-3">
+            <label for="type" class="form-label">Enter Product Type</label>
+            <input type="text" class="form-control" id="type">
+            <div id="error-type" style="color: red; display: none;">Cannot add product. Please fill in all fields.</div>
+          </div>
+          <div class="mb-3">
+            <label for="desc" class="form-label">Enter Product Desc</label>
+            <textarea  type="text" class="form-control" id="desc" rows="3"></textarea>
+          </div>
+          <button id="add" type="button" class="btn btn-primary mt-3 w-100 bg-black">add Product</button>
+
+          <input type="search" onkeyup="searchProduct(this.value)" class="form-control w-50 mx-auto my-3 " list="datalistOptions" id="searchInput" placeholder=" search...">
+       
+          <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>price</th>
+                    <th>type</th>
+                    <th>desc</th>
+                    <th>action</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                
+            </tbody>
+        </table>
+        
+
+        </form>
+    </div>
+</div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/main.js"></script>
+</body>
+</html>
